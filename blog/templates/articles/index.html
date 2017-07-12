@@ -39,21 +39,9 @@
           <div class="columns">
             <!-- Content of the article -->
             <div class="column content">
-              <h1 id="">Compression Fractale <img src="https://api.travis-ci.org/remi100756/Compression-Fractale.svg" alt="Travis Status" /></h1>
-              <p>Algo de compression d'image par fractales. TIPE 2015-2016.</p>
-              <h2 id=""><a href="https://github.com/remi100756/Compression-Fractale/blob/master/documentation.md">Documentation du code</a></h2>
-              <h2 id="">Configuration</h2>
-              <h3 id="">Récupération du projet</h3>
-              <pre><code class="shell language-shell">git clone https://github.com/remi100756/Compression-Fractale.git
-              cd Compression-Fractale
-              </code></pre>
-              <h3 id="">Compilation</h3>
-              <pre><code class="shell language-shell">make # Compilation (linux)
-              make clean # Pour enlever les fichiers de compilation
-              </code></pre>
-              <h2 id="">Exemple</h2>
-              <p>Des exemples sont générés automatiquement à l'adresse suivante : http://remidupre.alwaysdata.net/fractal/</p>
-              <p><img src="https://raw.githubusercontent.com/remi100756/Compression-Fractale/master/lena.gif" alt="Exemple:Lena" /></p>
+              {% autoescape off %}
+                {{ html }}
+              {% endautoescape %}
             </div>
 
             <div class="column is-one-third">

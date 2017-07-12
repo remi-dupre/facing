@@ -2,3 +2,4 @@
 compression-fractale:
   title: Compression Fractale
   description: Compression d'images avec perte en les approximant par des IFS.
+  content: projects/compression-fractale.md

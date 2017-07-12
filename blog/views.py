@@ -10,10 +10,10 @@ def read_article(request, article_name) :
     except KeyError:
         return HttpResponse("The article %s hasn't been referenced" % article_name)
 
-    print(description)
     context = {
         'title': description['title'],
-        'description': description['description']
+        'description': description['description'],
+        'html': description['html']
     }
 
     navbar = loader.get_template('main/navbar.html')
