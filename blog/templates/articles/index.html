@@ -3,6 +3,9 @@
 # Variable that are used :
 #  - title
 {% endcomment %}
+
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="fr">
     <head>
@@ -10,6 +13,7 @@
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href={% static "css/syntax.css" %}>
 
         <link rel="icon" type="image/png" href="imgs/icon.png">
         <title>{{ title }}</title>
