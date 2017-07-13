@@ -8,7 +8,7 @@ from django.template import loader
 from . import Card
 
 
-class UselessCard(Card) :
+class FileCard(Card) :
     template = loader.get_template('cards/file.html')
 
     def __init__(self, conf) :
