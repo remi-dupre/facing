@@ -1,0 +1,24 @@
+{% load static %}
+
+<a href="{% static path %}" target="_blank">
+  <div class="card">
+    <div class="card-content">
+      <div class="media">
+        <div class="media-left">
+          <figure class="image is-48x48">
+            <i class="fa fa-file-{{ filetype }}-o" aria-hidden="true" style="font-size: 3em;"></i>
+          </figure>
+        </div>
+        <div class="media-content">
+            <p class="title is-5">{{ name }}</p>
+            <p class="subtitle is-6">{{ subtitle }}</p>
+        </div>
+      </div>
+      <div class="content">
+        {{ description }}
+        <br />
+        <small>{{ date }}</small>
+      </div>
+    </div>
+  </div>
+</a>

@@ -9,6 +9,7 @@ import markdown2
 import django.utils.autoreload
 
 from ..cards.github import GithubCard
+from ..cards.file import FileCard
 
 
 # Loads informations about articles from index.yaml
@@ -44,3 +45,5 @@ for art_key in descs :
     for i in range(len(cards_conf)) :
         if cards_conf[i]['type'] == 'github' :
             descs[art_key]['cards'].append(GithubCard(cards_conf[i]))
+        if cards_conf[i]['type'] == 'file' :
+            descs[art_key]['cards'].append(FileCard(cards_conf[i]))

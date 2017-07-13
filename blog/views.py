@@ -3,7 +3,6 @@ from django.template import loader
 
 from .articles import descs as article_descs
 
-from .cards.github import GithubCard
 from .cards.useless import UselessCard
 
 
