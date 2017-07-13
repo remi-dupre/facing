@@ -11,8 +11,8 @@
     <head>
         <meta charset="utf-8">
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.min.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/{{bulma_version}}/css/bulma.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/{{fo_version}}/css/font-awesome.min.css">
         <link rel="stylesheet" href={% static "css/syntax.css" %}>
         <link rel="stylesheet" href={% static "css/article.css" %}>
 
@@ -67,20 +67,7 @@
         </div>
       </section>
 
-      <footer class="footer">
-        <div class="container">
-          <div class="content has-text-centered">
-            <p>
-              <strong>Rémi Dupré</strong>, licensed MIT.
-            </p>
-            <p>
-              <a class="icon" href="https://github.com/remi-dupre/facing" target="_blank">
-                <i class="fa fa-github"></i>
-              </a>
-            </p>
-          </div>
-        </div>
-      </footer>
+      {{ footer }}
 
     </body>
 </html>

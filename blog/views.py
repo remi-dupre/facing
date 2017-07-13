@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+from django import get_version
 from django.http import HttpResponse
 from django.template import loader
 
@@ -19,7 +20,10 @@ def read_article(request, article_name) :
         'description': description['description'],
         'html': description['html'],
         'date': description['date'],
-        'card_list': []
+        'card_list': [],
+        'bulma_version': '0.4.3',
+        'django_version': get_version(),
+        'fo_version': '4.7.0'
     }
 
     # Render cards
@@ -31,6 +35,9 @@ def read_article(request, article_name) :
 
     navbar = loader.get_template('main/navbar.html')
     context['navbar'] = navbar.render(context, request)
+
+    footer = loader.get_template('main/footer.html')
+    context['footer'] = footer.render(context, request)
 
     index = loader.get_template('articles/index.html')
     return HttpResponse(index.render(context, request))
