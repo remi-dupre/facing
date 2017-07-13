@@ -32,7 +32,7 @@ for art_key in descs :
             descs[art_key]['content'] = f.read()
             descs[art_key]['html'] = markdown2.markdown(
                 descs[art_key]['content'],
-                extras=["fenced-code-blocks", "code-color"]
+                extras=["fenced-code-blocks", "code-color", "footnotes"]
             )
     except Exception as exc:
         print('An error occured while reading %s\'s content : %s' % (art_key, str(exc)))

@@ -26,7 +26,7 @@ SECRET_KEY = '4r!1q6z@*e817@qh4f=_azn@3f@muq)o5gzv)x-%9jnb@-x4mt'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['whoping.fr']
+ALLOWED_HOSTS = ['127.0.0.1', 'whoping.fr']
 
 
 # Application definition
