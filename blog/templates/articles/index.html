@@ -14,6 +14,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.3/css/bulma.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href={% static "css/syntax.css" %}>
+        <link rel="stylesheet" href={% static "css/article.css" %}>
 
         <link rel="icon" type="image/png" href="imgs/icon.png">
         <title>{{ title }}</title>
@@ -50,11 +51,7 @@
 
             <div class="column is-one-third">
               {% for card in card_list %}
-              <div class="columns">
-                <div class="column">
-                  {{ card }}
-                </div>
-              </div>
+                {{ card }}
               {% endfor %}
 
               <!-- PDF pannel -->
@@ -82,13 +79,6 @@
                       </div>
                     </div>
                   </div>
-                </div>
-              </div>
-
-              <!-- Useless pannel -->
-              <div class="columns">
-                <div class="column">
-
                 </div>
               </div>
 

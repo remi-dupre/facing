@@ -1,0 +1,20 @@
+/** Custom style relating to articles */
+
+.card {
+    margin-bottom: 15px;
+}
+
+.card .card-head {
+    min-width: 0px;  /* Permits nonwrap in flexbox */
+}
+
+.card .title {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+}
+
+.card small {
+    color: grey;
+    font-size: 0.7em;
+}
