@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Keeps informations and renders template for a card.
 """

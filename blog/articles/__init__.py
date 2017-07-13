@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Gestion of generic articles written in markdown.
 """

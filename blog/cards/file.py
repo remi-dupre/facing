@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Loads informations about a repository.
 """
@@ -7,7 +8,7 @@ from django.template import loader
 from . import Card
 
 
-class FileCard(Card) :
+class UselessCard(Card) :
     template = loader.get_template('cards/file.html')
 
     def __init__(self, conf) :
