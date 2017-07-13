@@ -1,5 +1,16 @@
 ---
 compression-fractale:
   title: Compression Fractale
-  description: Compression d'images avec perte en les approximant par des IFS.
+  description: >
+    Utilisation de systèmes itérés de fonctions pour compresser des images avec pertes.
   content: projects/compression-fractale.md
+  attachments:
+    - type: github
+      repo: remi-dupre/compression-fractale
+      download_btn: true
+      release_btn: true
+    - type: github
+      repo: remi-dupre/compression-fractale-python
+      download_btn: true
+    - type: github
+      repo: Tamalulu/FractalCompression

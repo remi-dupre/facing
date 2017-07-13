@@ -49,6 +49,14 @@
             </div>
 
             <div class="column is-one-third">
+              {% for card in card_list %}
+              <div class="columns">
+                <div class="column">
+                  {{ card }}
+                </div>
+              </div>
+              {% endfor %}
+
               <!-- PDF pannel -->
               <div class="columns">
                 <div class="column">
@@ -73,49 +81,6 @@
                         <small>42 juillet 1996</small>
                       </div>
                     </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Github pannel -->
-              <div class="columns">
-                <div class="column">
-                  <div class="card">
-                    <div class="card-content">
-                      <div class="media">
-                        <div class="media-left">
-                          <figure class="image is-48x48">
-                            <i class="fa fa-github" aria-hidden="true" style="font-size: 3em;"></i>
-                          </figure>
-                        </div>
-                        <a href="">
-                          <div class="media-content">
-                            <p class="title is-4">Github</p>
-                            <p class="subtitle is-6">nom-du-dépot</p>
-                          </div>
-                        </a>
-                      </div>
-                      <div class="content">
-                        Description du projet de github. Blabla ... La vie ... Blabla ... La vie ... Blabla ... La vie ... Blabla ... La vie ...
-                        <br>
-                        <small>Quelques stats du dépots (last commit ?)</small>
-                      </div>
-                    </div>
-                    <footer class="card-footer">
-                      <a class="card-footer-item">
-                          <span class="icon is-small">
-                            <i class="fa fa-file-code-o"></i>
-                          </span>
-                          <div style="margin:5px"></div>
-                          <span>Source</span>
-                      </a>
-                      <a class="card-footer-item">
-                          <span class="icon is-small">
-                            <i class="fa fa-file-archive-o"></i>
-                          </span>
-                          <div style="margin:5px"></div>
-                          <span>Release</span></a>
-                    </footer>
                   </div>
                 </div>
               </div>

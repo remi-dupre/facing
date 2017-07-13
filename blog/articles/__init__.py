@@ -8,6 +8,8 @@ import markdown2
 
 import django.utils.autoreload
 
+from ..cards.github import GithubCard
+
 
 # Loads informations about articles from index.yaml
 root_dir = os.path.dirname(__file__)
@@ -17,7 +19,9 @@ django.utils.autoreload._cached_filenames.append(desc_file)
 with open(desc_file, 'r') as f:
     descs = yaml.load(f)
 
-# Read articles content
+
+# Loads main content
+print('Opening articles descriptions')
 for art_key in descs :
     try:
         filename = root_dir + '/' + descs[art_key]['content']
@@ -30,3 +34,13 @@ for art_key in descs :
             )
     except Exception as exc:
         print('An error occured while reading %s\'s content : %s' % (art_key, str(exc)))
+
+
+# Loads cards
+print('Loading articles attachments')
+for art_key in descs :
+    cards_conf = descs[art_key]['attachments']
+    descs[art_key]['cards'] = []
+    for i in range(len(cards_conf)) :
+        if cards_conf[i]['type'] == 'github' :
+            descs[art_key]['cards'].append(GithubCard(cards_conf[i]))
