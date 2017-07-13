@@ -18,7 +18,7 @@ root_dir = os.path.dirname(__file__)
 desc_file = root_dir + '/index.yaml'
 
 django.utils.autoreload._cached_filenames.append(desc_file)
-with open(desc_file, 'r') as f:
+with open(desc_file, 'r', encoding='utf-8') as f:
     descs = yaml.load(f)
 
 
