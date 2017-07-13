@@ -28,7 +28,7 @@ for art_key in descs :
     try:
         filename = root_dir + '/' + descs[art_key]['content']
         django.utils.autoreload._cached_filenames.append(filename)
-        with open(filename, 'r', , encoding='utf-8') as f :
+        with open(filename, 'r', encoding='utf-8') as f :
             descs[art_key]['content'] = f.read()
             descs[art_key]['html'] = markdown2.markdown(
                 descs[art_key]['content'],
