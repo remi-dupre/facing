@@ -1,0 +1,42 @@
+<div class="card">
+  <div class="card-content">
+    <div class="media">
+      <div class="media-left">
+        <figure class="image is-48x48">
+          <i class="fa fa-github" aria-hidden="true" style="font-size: 3em;"></i>
+        </figure>
+      </div>
+      <div class="media-content card-head">
+        <a href="{{ url }}">
+          <p class="title is-5">{{ name }}</p>
+          <p class="subtitle is-6">{{ owner }}</p>
+        </a>
+      </div>
+    </div>
+    <div class="content">
+      {{ description }}
+      <br />
+      <small>langage {{ language }}, dernière modification le {{ last_modified }}</small>
+    </div>
+  </div>
+  <footer class="card-footer">
+    {% if download_btn %}
+    <a class="card-footer-item" href="{{ download }}">
+        <span class="icon is-small">
+          <i class="fa fa-file-code-o"></i>
+        </span>
+        <div style="margin:5px"></div>
+        <span>Source</span>
+    </a>
+    {% endif %}
+    {% if release_btn %}
+    <a class="card-footer-item" href="{{ last_release.url }}">
+        <span class="icon is-small">
+          <i class="fa fa-file-archive-o"></i>
+        </span>
+        <div style="margin:5px"></div>
+        <span>{{ last_release.tag }}</span>
+      </a>
+      {% endif %}
+  </footer>
+</div>
