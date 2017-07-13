@@ -4,6 +4,7 @@ from django.template import loader
 from .articles import descs as article_descs
 
 from .cards.github import GithubCard
+from .cards.useless import UselessCard
 
 
 def read_article(request, article_name) :
@@ -22,6 +23,9 @@ def read_article(request, article_name) :
     # Render cards
     for card in description['cards'] :
         context['card_list'].append(card.html(request))
+
+    # Easter egg
+    context['card_list'].append(UselessCard().html(request))
 
     navbar = loader.get_template('main/navbar.html')
     context['navbar'] = navbar.render(context, request)
