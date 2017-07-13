@@ -4,6 +4,8 @@ compression-fractale:
   description: >
     Utilisation de systèmes itérés de fonctions pour compresser des images avec pertes.
   content: projects/compression-fractale.md
+  date: 13/07/2017
+
   attachments:
     - type: file
       name: Rapport de TIPE

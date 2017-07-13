@@ -16,6 +16,7 @@ def read_article(request, article_name) :
         'title': description['title'],
         'description': description['description'],
         'html': description['html'],
+        'date': description['date'],
         'card_list': []
     }
 
