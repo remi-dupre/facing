@@ -15,7 +15,7 @@ Ici, une fonction `repr` prendra en argument la structure et un élément et ret
       1   5
 
 Ensemble [0, 7] partitionné en deux parties : {1, 2, 3, 5, 7} et {0, 4, 6}.
-On a :
+On a alors deux représentants: 3 et 4
     repr(uf, 5) = repr(uf, 3) = 3
     repr(uf, 0) = repr(uf, 4) = 4
 ```
@@ -43,8 +43,8 @@ void union(vector<int> &uf, int a, int b) {
 ```
       3             4               3
      / \           / \             /|\
-    2   7         0   6     ->    2 | \
-       / \                          7  4
+    2   7         0   6     ->    / | \
+       / \                       2  7  4
       1   5                        /|  |\
                                   1 5  0 6
 ```
@@ -72,4 +72,4 @@ int repr(vector<int> uf, a) {
 
 Complexité
 ----------
-Il est possible d'ameillorer la complexité en une complexité très faible en rajoutant encore [une ameilloration](https://www.wikiwand.com/fr/Union-find#/Impl.C3.A9mentation_utilisant_des_for.C3.AAts).  
+Il est possible d'améillorer la complexité en une complexité très faible en rajoutant encore [une ameilloration](https://www.wikiwand.com/fr/Union-find#/Impl.C3.A9mentation_utilisant_des_for.C3.AAts&).  
