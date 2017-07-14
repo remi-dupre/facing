@@ -5,7 +5,7 @@ L'idée part du constat qu'une image reproduit souvent plusieurs fois des formes
 ### Algorithme
 Pour cela on a un ensemble de quelques transformations que l'on peut appliquer.
 L'algorithme naïf consiste à calculer chacunes de ces transformations pour tous les blocs, et de chercher pour chaque portion laquelle est la plus proche.
-Pour décompresser il suffit d'appliquer les tranformations obtenues récursivements, le théorème du point fixe de [Banach](fixpoint) assurant que cette opération converge vers un résultat.
+Pour décompresser il suffit d'appliquer les tranformations obtenues récursivements, le théorème du point fixe de [Banach][fixpoint] assurant que cette opération converge vers un résultat.
 
 Résultats
 ---------
@@ -14,7 +14,7 @@ L'algorithme qui précède est très lourd, et même si on peut avoir des taux d
 Travail en cours
 ----------------
 Pour accélérer le processus, je cherche de temps en temps une structure de donnée qui permettrait d'accélérer le processus de recherche.
-Un problème étant le concept de [fléaux de la dimension](dimension)[^bigdim], il est difficile d'imaginer une méthode exacte. Les méthodes que j'utilises sont du coup arbitraires et doivent êtres testées manuelement avant de conclure.
+Un problème étant le concept de [fléaux de la dimension][dimension][^bigdim], il est difficile d'imaginer une méthode exacte. Les méthodes que j'utilises sont du coup arbitraires et doivent êtres testées manuelement avant de conclure.
 
 À propos
 --------
