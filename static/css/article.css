@@ -18,3 +18,11 @@
     color: grey;
     font-size: 0.7em;
 }
+
+.img-container {
+    text-align: center;
+}
+
+.img-container img {
+    width: 30%;
+}

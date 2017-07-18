@@ -21,6 +21,11 @@ Un problème étant le concept de [fléaux de la dimension][dimension][^bigdim],
 L'idée a été lancée par [Christophe Bertault][cbertault], qui était à ce moment mon professeur de MPSI.
 Je me suis lancé dans ce projet pour mon TIPE que j'ai soutenu en MP* où j'ai été encadré par [Jérome Gaertner][jgaertner].
 
+<p class="img-container">
+    <img src="https://raw.githubusercontent.com/remi100756/Compression-Fractale/master/lena.gif">
+</p>
+
+
 
 [^bigdim]: En général on s'intéresse à des blocs de 4x4 ou 8x8 environs, donc des espaces de dimension 16 ou 64
 
