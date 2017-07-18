@@ -9,12 +9,12 @@ import markdown2
 
 import django.utils.autoreload
 
-from ..cards.github import GithubCard
-from ..cards.file import FileCard
+from .cards.github import GithubCard
+from .cards.file import FileCard
 
 
 # Loads informations about articles from index.yaml
-root_dir = os.path.dirname(__file__)
+root_dir = os.path.dirname(__file__) + '/../articles'
 desc_file = root_dir + '/index.yaml'
 
 django.utils.autoreload._cached_filenames.append(root_dir)
@@ -22,6 +22,7 @@ django.utils.autoreload._cached_filenames.append(desc_file)
 
 with open(desc_file, 'r', encoding='utf-8') as f:
     descs = yaml.load(f)
+    print(descs)
 
 
 # Loads main content

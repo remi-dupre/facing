@@ -22,7 +22,6 @@ compression-fractale:
     - type: github
       repo: Tamalulu/FractalCompression
 
-
 union-find:
   title: Union Find
   description: >
