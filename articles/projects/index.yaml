@@ -1,0 +1,28 @@
+---
+name: Algorithmique
+
+articles:
+  compression-fractale:
+    title: Compression Fractale
+    description: >
+      Utilisation de systèmes itérés de fonctions pour compresser des images avec pertes.
+    flags: [projet]
+    icon: book
+    content: projects/compression-fractale.md
+    date: 13/07/2017
+    attachments:
+      - type: file
+        name: Rapport de TIPE
+        description: >
+          Compte rendu de TIPE, reprenant les concepts de base de la compression d'images par fractales.
+        path: pdf/tipe.pdf
+        date: juin 2016
+      - type: github
+        repo: remi-dupre/compression-fractale
+        download_btn: true
+        release_btn: true
+      - type: github
+        repo: remi-dupre/compression-fractale-python
+        download_btn: true
+      - type: github
+        repo: Tamalulu/FractalCompression

@@ -1,0 +1,13 @@
+---
+name: Projets
+
+articles:
+  union-find:
+    title: Union Find
+    description: >
+      Union Find is love.
+    flags: [algo]
+    icon: code
+    content: algo/union-find.md
+    date: 14/07/2017
+    attachments: []
