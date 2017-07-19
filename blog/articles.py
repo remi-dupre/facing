@@ -3,7 +3,7 @@
 Gestion of generic articles written in markdown.
 """
 
-import os
+import os, sys
 import yaml
 import markdown2
 
@@ -17,12 +17,12 @@ from .cards.file import FileCard
 root_dir = os.path.dirname(__file__) + '/../articles'
 desc_file = root_dir + '/index.yaml'
 
+# Reloads when modification are oppered on root dir
 django.utils.autoreload._cached_filenames.append(root_dir)
-django.utils.autoreload._cached_filenames.append(desc_file)
 
+# load general description
 with open(desc_file, 'r', encoding='utf-8') as f:
     descs = yaml.load(f)
-    print(descs)
 
 
 # Loads main content
@@ -46,7 +46,11 @@ print('Loading articles attachments')
 for art_key in descs :
     cards_conf = descs[art_key]['attachments']
     descs[art_key]['cards'] = []
-    for i in range(len(cards_conf)) :
+
+    nb_attached = len(cards_conf)
+    for i in range(nb_attached) :
+        print('%s (%d/%d) [%s]' % (art_key, i+1, nb_attached, cards_conf[i]['type']), end='\r')
+
         if cards_conf[i]['type'] == 'github' :
             descs[art_key]['cards'].append(GithubCard(cards_conf[i]))
         if cards_conf[i]['type'] == 'file' :

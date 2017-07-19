@@ -3,6 +3,8 @@ compression-fractale:
   title: Compression Fractale
   description: >
     Utilisation de systèmes itérés de fonctions pour compresser des images avec pertes.
+  flags: [projet]
+  icon: book
   content: projects/compression-fractale.md
   date: 13/07/2017
   attachments:
@@ -26,6 +28,8 @@ union-find:
   title: Union Find
   description: >
     Union Find is love.
+  flags: [algo]
+  icon: code
   content: algo/union-find.md
   date: 14/07/2017
   attachments: []
