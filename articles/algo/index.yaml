@@ -7,8 +7,24 @@ articles:
     title: Union Find
     description: >
       Union Find is love.
-    flags: [algo]
+    flags: [algo, structure]
     icon: code
     content: algo/union-find.md
     date: 14/07/2017
     attachments: []
+
+  segment-tree:
+    title: Segment Tree
+    description: >
+      Calculer sur des tronconts d'un ensemble d'éléments.
+    flags: [algo, structure]
+    icon: code
+    content: algo/segment-tree.md
+    date: 15/09/2017
+    attachments:
+      - type: file
+        name: Segment Tree C++
+        description: >
+          Une classe implémentant les segment trees en C++, pour la somme.
+        path: code/algo/segment-tree.cpp
+        date: 15/09/2017

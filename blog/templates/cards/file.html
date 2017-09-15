@@ -6,7 +6,11 @@
       <div class="media">
         <div class="media-left">
           <figure class="image is-48x48">
-            <i class="fa fa-file-{{ filetype }}-o" aria-hidden="true" style="font-size: 3em;"></i>
+            {% if filetype == "pdf" %}
+              <i class="fa fa-file-{{ filetype }}-o" aria-hidden="true" style="font-size: 3em;"></i>
+            {% elif filetype == "cpp" %}
+              <i class="fa fa-file-code-o" aria-hidden="true" style="font-size: 3em;"></i>
+            {% endif %}
           </figure>
         </div>
         <div class="media-content">
