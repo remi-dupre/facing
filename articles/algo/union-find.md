@@ -72,4 +72,4 @@ int repr(vector<int> uf, a) {
 
 Complexité
 ----------
-Il est possible d'améillorer la complexité en une complexité très faible en rajoutant encore [une ameilloration](https://www.wikiwand.com/fr/Union-find#/Impl.C3.A9mentation_utilisant_des_for.C3.AAts&).  
+Il est possible d'améillorer la complexité en une complexité très faible en rajoutant encore [une amélioration](https://www.wikiwand.com/fr/Union-find#/Impl.C3.A9mentation_utilisant_des_for.C3.AAts&).  
