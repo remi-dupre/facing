@@ -42,7 +42,7 @@ for cat in os.listdir(root_dir) :  # open each category directories
                 art_description['content'] = f.read()
                 art_description['html'] = markdown2.markdown(
                     art_description['content'],
-                    extras=["fenced-code-blocks", "code-color", "footnotes"]
+                    extras=["fenced-code-blocks", "code-color", "footnotes", "header-ids"]
                 )
 
             # Load article's cards

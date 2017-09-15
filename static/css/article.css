@@ -1,5 +1,7 @@
 /** Custom style relating to articles */
 
+/* Dealing with cards */
+
 .card {
     display: block;
     margin-bottom: 15px;
@@ -16,9 +18,9 @@
 }
 
 .card .title {
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 .card small {
@@ -26,10 +28,42 @@
     font-size: 0.7em;
 }
 
+/* Integration of images inside article */
+
 .img-container {
     text-align: center;
 }
 
 .img-container img {
     width: 30%;
+}
+
+/* Table of content's style */
+
+#tableofcontents hr {
+    margin: 5px 0px 8px 0px;
+}
+
+#tableofcontents ul {
+    margin: 0px;
+}
+
+#tableofcontents li {
+    margin: 0px;
+    list-style-type: none;
+}
+
+#tableofcontents li a {
+    display: inline-block;
+}
+
+#tableofcontents .h2 {
+    font-size: 16px;
+    margin-top: 6px
+}
+
+#tableofcontents .h3 {
+    font-size: 12px;
+    margin-left: 8px;
+    margin-top: 0px;
 }

@@ -50,6 +50,21 @@
             </div>
 
             <div class="column is-one-third">
+              <!-- Table of contents -->
+              <div class="content is-small" id="tableofcontents">
+                <h2>Table des matières</h2>
+                <hr>
+                <ul>
+                  {% for title in titles %}
+                  <li>
+                    <a href="#{{title.id}}" class="{{title.type}}">
+                      {{title.text}}
+                    </a>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+
               {% for card in card_list %}
                 {{ card }}
               {% endfor %}

@@ -3,6 +3,7 @@
 from django import get_version
 from django.http import HttpResponse
 from django.template import loader
+from bs4 import BeautifulSoup
 
 from .articles import descs
 
@@ -51,6 +52,22 @@ def read_article(request, category_name, article_name) :
         'django_version': get_version(),
         'fo_version': '4.7.0'
     }
+
+    # Generate table of contents
+    content = BeautifulSoup(context['html'])
+    titles = content.find_all(['h2', 'h3'])  # list of titles
+    # Extract links informations
+    links = []
+    for title in titles :
+        ide = title.get('id')
+        typ = title.name
+        txt = title.text
+        links.append({
+            'id': ide,
+            'type': typ,
+            'text': txt
+        })
+    context['titles'] = links
 
     # Render cards
     for card in description['cards'] :
