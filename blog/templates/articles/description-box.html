@@ -1,0 +1,41 @@
+<a href="{{category}}/{{id}}" class="card">
+  <div class="box">
+    <article class="media">
+      <div class="media-left">
+        <figure class="image is-64x64">
+          <i class="fa fa-{{icon}} fa-4x" aria-hidden="true"></i>
+        </figure>
+      </div>
+      <div class="media-content">
+        <div class="content">
+          <p>
+            <strong>{{ title }}</strong>
+            <small>{{ date }}</small>
+            <br>
+            {{ description }}
+          </p>
+        </div>
+        <nav class="level is-mobile">
+          <div class="level-left">
+            {% for attachment in attachments %}
+              {% if attachment.type == "github" %}
+                <span class="level-item">
+                  <span class="icon is-small"><i class="fa fa-github-alt"></i></span>
+                </span>
+              {% elif attachment.type == "file" %}
+                <span class="level-item">
+                  <span class="icon is-small"><i class="fa fa-file"></i></span>
+                </span>
+              {% endif %}
+            {% endfor %}
+          </div>
+          <div class="level-right">
+            {% for flag in flags %}
+              <span class="tag">{{ flag }}</span>
+            {% endfor %}
+          </div>
+        </nav>
+      </div>
+    </article>
+  </div>
+</a>

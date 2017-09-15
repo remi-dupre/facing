@@ -1,0 +1,67 @@
+{% comment %}
+# Main page to display an article.
+# Variable that are used :
+#  - title
+#  - navbar
+#  - articles :
+#    - cat_name
+#    - cat_desc
+#    - cat : articles
+{% endcomment %}
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/{{bulma_version}}/css/bulma.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/{{fo_version}}/css/font-awesome.min.css">
+        <link rel="stylesheet" href={% static "css/syntax.css" %}>
+        <link rel="stylesheet" href={% static "css/article.css" %}>
+
+        <link rel="icon" type="image/png" href="{% static "img/logo/black.png" %}">
+        <title>{{ title }}</title>
+    </head>
+
+    <body class="page-components">
+      <div class="container">
+        {{ navbar }}
+      </div>
+
+    <section class="hero is-primary">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title">
+            Liste des articles
+          </h1>
+          <h2 class="subtitle">
+            Tous les articles
+          </h2>
+        </div>
+      </div>
+    </section>
+
+      <!-- Main content -->
+      <section class="section">
+        <div class="container">
+          <div class="columns">
+            {% for cat_name, cat in articles.items %}
+            <div class="column is-half">
+              <h5 class="title is-4">
+                {{ cat_name }}
+              </h5>
+              {% for article in cat %}
+                {{ article }}
+              {% endfor %}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+
+      {{ footer }}
+
+    </body>
+</html>

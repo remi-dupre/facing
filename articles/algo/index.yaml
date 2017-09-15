@@ -1,5 +1,6 @@
 ---
-name: Projets
+name: Algorithmique
+desc: Des problèmes, des algorithmes et des structures utiles.
 
 articles:
   union-find:

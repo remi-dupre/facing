@@ -1,5 +1,6 @@
 ---
-name: Algorithmique
+name: Projets
+desc: Quelques projets que j'aimerai mettre en valeur.
 
 articles:
   compression-fractale:

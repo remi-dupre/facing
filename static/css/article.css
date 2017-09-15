@@ -1,6 +1,7 @@
 /** Custom style relating to articles */
 
 .card {
+    display: block;
     margin-bottom: 15px;
 }
 
