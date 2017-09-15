@@ -11,7 +11,7 @@ urlpatterns = [
         views.read_article, name='read_article'
     ),
     url(
-        r'^article/',
+        r'^article/$',
         views.list_articles, name='list_articles'
     )
 ]
