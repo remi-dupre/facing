@@ -5,6 +5,12 @@
     margin-bottom: 15px;
 }
 
+.card:hover {
+    transition-property: margin-left;
+    margin-left: -5px;
+    transition-duration: 0.2s;
+}
+
 .card .card-head {
     min-width: 0px;  /* Permits nonwrap in flexbox */
 }

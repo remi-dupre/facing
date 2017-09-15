@@ -57,7 +57,7 @@ def read_article(request, category_name, article_name) :
         context['card_list'].append(card.html(request))
 
     # Easter egg
-    # context['card_list'].append(UselessCard().html(request))
+    context['card_list'].append(UselessCard().html(request))
 
     context['navbar'] = navbar.render(context, request)
     context['footer'] = footer.render(context, request)
